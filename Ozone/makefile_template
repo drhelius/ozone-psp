@@ -1,0 +1,15 @@
+TARGET = game
+INCDIR =
+CFLAGS = -O2 -G0 -Wall
+CXXFLAGS = $(CFLAGS) -fno-exceptions -fno-rtti
+ASFLAGS = $(CFLAGS)
+LIBDIR =
+LDFLAGS =
+LIBS= -lmad -lmikmod -lpspaudiolib -lpspaudio -lpsppower -lpspgum -lpspgu -lpsprtc -lm -lstdc++
+EXTRA_TARGETS = EBOOT.PBP
+PSP_EBOOT_TITLE = Ozone
+PSP_EBOOT_PIC1 = ./Menu/PIC1.PNG
+PSP_EBOOT_ICON = ./Menu/ICON0.PNG
+PSP_EBOOT_SND0 = ./Menu/SND0.AT3
+PSPSDK=$(shell psp-config --pspsdk-path)
+include e:/pspdev/PSP/SDK/lib/build.mak
